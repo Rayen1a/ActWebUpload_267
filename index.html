@@ -55,10 +55,9 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             background: linear-gradient(to right, #ffffff, #cbd5e1);
-            -webkit-background-clip: text;
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            color: transparent;
         }
 
         .subtitle {
@@ -150,7 +149,7 @@
             text-overflow: ellipsis;
         }
 
-        button[type="submit"] {
+        input[type="submit"] {
             font-family: inherit;
             background: var(--accent);
             color: white;
@@ -164,9 +163,11 @@
             margin-top: 24px;
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px var(--accent-glow);
+            appearance: none;
+            -webkit-appearance: none;
         }
 
-        button[type="submit"]:hover {
+        input[type="submit"]:hover {
             transform: translateY(-1px);
             box-shadow: 0 6px 20px var(--accent-glow);
             filter: brightness(1.1);
@@ -200,7 +201,7 @@
         <div class="upload-area">
             <div class="icon-box">✦</div>
             <div class="upload-text" id="statusText">Pilih berkas yang ingin diunggah</div>
-            <div class="upload-subtext">JPG, PNG, GIF hingga ukuran 500KB</div>
+            <div class="upload-subtext">JPG, PNG, GIF hingga ukuran 2MB</div>
             <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" required>
         </div>
 
@@ -209,11 +210,11 @@
             <div class="file-meta" id="metaInfo"></div>
         </div>
 
-        <button type="submit" name="submit">Unggah Komponen</button>
+        <input type="submit" value="Unggah Komponen" name="submit">
     </form>
     
     <div class="nav-footer">
-        <a href="files.php" class="link">Buka Repositori Berkas yang sudah diunggah →</a>
+        <a href="files.php" class="link">Buka Repositori Berkas yang sudah anda unggah →</a>
     </div>
 </div>
 
